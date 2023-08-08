@@ -1,6 +1,4 @@
-
-import './categories.styles.scss';
-import CategoryItem from './components/category-item/category-item.component';
+import Directory from './components/directory/directory.component';
 
 const App = () => {
 
@@ -30,15 +28,10 @@ const App = () => {
       "title": "Teaware",
       "imageUrl": "https://images.unsplash.com/photo-1607644962019-09feffe09624?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1774&q=80"
     }
-  ]
+  ];
 
-  return (
-    <div className='categories-container'>
-      {categories.map((category) => (
-        <CategoryItem key={category.id} category={category} />
-      ))}
-    </div>
-  );
+  return <Directory categories={ categories } />;
+
 };
 
 export default App;
