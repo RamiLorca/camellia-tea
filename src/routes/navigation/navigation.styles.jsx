@@ -17,6 +17,7 @@ export const NavigationContainer = styled.div`
     ${mobileMediaQuery} {
       font-size: 18px;
       padding: auto;
+      font-weight: 400;
     }
   }
 `;

@@ -1,8 +1,16 @@
+$mobile-max-width: 900px;
+
 .category-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 20px;
     row-gap: 50px;
+    margin-bottom: 30px;
+
+    @media (max-width: $mobile-max-width) {
+        grid-template-columns: repeat(2, 2fr);
+        row-gap: 40px;
+      }
 }
 
 .category-title {
