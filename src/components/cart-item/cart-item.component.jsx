@@ -11,10 +11,8 @@ const CartItem = ({cartItem}) => {
                     {quantity} x ${price}
                 </span>
             </div>
-            <h2>{name}</h2>
-            <span>{quantity}</span>
         </div>
-    )
+    );
 };
 
 export default CartItem;

@@ -53,6 +53,7 @@ export const CartProvider = ({children}) => {
     const [cartItems, setCartItems] = useState([]);
     const [cartCount, setCartCount] = useState(0);
     const [cartTotal, setCartTotal] = useState(0);
+    const [isCheckoutPage, setIsCheckoutPage] = useState(false);
 
     useEffect(() => {
         const newCartCount = cartItems.reduce((total, cartItem) => total + cartItem.quantity, 0)
@@ -84,7 +85,9 @@ export const CartProvider = ({children}) => {
         clearItemFromCart, 
         cartItems, 
         cartCount,
-        cartTotal 
+        cartTotal,
+        isCheckoutPage,
+        setIsCheckoutPage 
     };
     return (
         <CartContext.Provider value={value}>{children}</CartContext.Provider>

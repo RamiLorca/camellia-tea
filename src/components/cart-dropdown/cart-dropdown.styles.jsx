@@ -3,7 +3,7 @@ import { BaseButton, GoogleSignInButton, InvertedButton } from '../button/button
 
 export const CartDropdownContainer = styled.div`
   position: absolute;
-  width: 240px;
+  width: auto;
   height: 340px;
   display: flex;
   flex-direction: column;
@@ -13,6 +13,7 @@ export const CartDropdownContainer = styled.div`
   top: 90px;
   right: 40px;
   z-index: 5;
+  border-radius: 3px;
 
   ${BaseButton},
   ${GoogleSignInButton},

@@ -11,7 +11,6 @@ export const BaseButton = styled.button`
     font-size: 15px;
     background-color: black;
     color: white;
-    text-transform: uppercase;
     font-family: 'Poppins';
     font-weight: 590;
     border: none;

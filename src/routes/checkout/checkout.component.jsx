@@ -1,11 +1,18 @@
 import './checkout.styles.scss';
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import { CartContext } from '../../context/cart.context';
 import CheckoutItem from '../../components/checkout-item/checkout-item.component';
 
 const Checkout = () => {
-    const { cartItems, cartTotal } = useContext(CartContext);
+    const { cartItems, cartTotal, setIsCheckoutPage } = useContext(CartContext);
 
+    useEffect(() => {
+        setIsCheckoutPage(true);
+        return () => {
+            setIsCheckoutPage(false);
+        };
+    }, [setIsCheckoutPage]);
+    
     return (
         <div className='checkout-container'>
             <div className='checkout-header'>

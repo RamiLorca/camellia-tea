@@ -20,6 +20,8 @@ const Navigation = () => {
             <Logo src={CamelliaLogo} className='logo' alt=''/>
           </LogoContainer>
 
+          <h1>CAMELLIA TEA CO.</h1>
+
           <NavLinks>
             <NavLink to='/shop'>
                 SHOP
