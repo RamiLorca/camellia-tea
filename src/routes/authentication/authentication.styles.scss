@@ -1,6 +1,14 @@
+$mobile-max-width: 900px;
+
 .authentication-container {
     display: flex;
     justify-content: space-between;
-    width: 900px;
+    max-width: 900px;
     margin: 30px auto;
+
+    @media (max-width: $mobile-max-width) {
+        flex-direction: column;
+        justify-content: center;
+        gap: 50px;
+      }
 }

@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
+const mobileMediaQuery = '@media (max-width: 768px)';
+
 export const NavigationContainer = styled.div`
   height: 70px;
   width: 100%;
@@ -11,6 +13,11 @@ export const NavigationContainer = styled.div`
   h1 {
     font-weight: 300;
     align-self: center;
+
+    ${mobileMediaQuery} {
+      font-size: 18px;
+      padding: auto;
+    }
   }
 `;
 
@@ -19,6 +26,13 @@ export const LogoContainer = styled(Link)`
   width: auto;
   padding: auto;
   margin: 0;
+
+  ${mobileMediaQuery} {
+    width: 40px;
+    height: auto;
+    margin-bottom: 10px;
+    margin-right: 10px;
+  }
 `;
 
 export const NavLinks = styled.div`
@@ -32,6 +46,9 @@ export const NavLinks = styled.div`
 export const NavLink = styled(Link)`
   padding: 10px 15px;
   cursor: pointer;
+  ${mobileMediaQuery} {
+    padding: 5px;
+  }
 `;
 
 export const Logo = styled.img`

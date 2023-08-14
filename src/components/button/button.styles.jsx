@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+const mobileMediaQuery = '@media (max-width: 768px)';
+
 export const BaseButton = styled.button`
 
     min-width: 165px;
@@ -7,7 +9,7 @@ export const BaseButton = styled.button`
     height: 50px;
     letter-spacing: 0.5px;
     line-height: 50px;
-    padding: 0 35px 0 35px;
+    padding: 0 35px;
     font-size: 15px;
     background-color: black;
     color: white;
@@ -17,12 +19,16 @@ export const BaseButton = styled.button`
     cursor: pointer;
     display: flex;
     justify-content: center;
-    border-radius: 3px;
+    border-radius: 4px;
 
     &:hover {
       background-color: white;
       color: black;
       border: 1px solid black;
+    }
+
+    ${mobileMediaQuery} {
+      padding: 0 5px;
     }
 `;
 

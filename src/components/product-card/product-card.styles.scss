@@ -1,3 +1,5 @@
+$mobile-max-width: 768px;
+
 .product-card-container {
     width: 100%;
     display: flex;
@@ -11,7 +13,8 @@
       height: 95%;
       object-fit: cover;
       margin-bottom: 5px;
-      border-radius: 3px;
+      border-radius: 4px;
+      border: 1px solid rgb(234, 234, 234);
     }
   
     button {
@@ -43,11 +46,20 @@
       .name {
         width: 90%;
         margin-bottom: 15px;
+
+        @media (max-width: $mobile-max-width) {
+          width: auto;
+        }
       }
   
       .price {
         width: 10%;
+        
+        @media (max-width: $mobile-max-width) {
+          width: auto;
+        }
       }
+
     }
   }
   
