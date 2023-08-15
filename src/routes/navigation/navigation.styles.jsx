@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 const mobileMediaQuery = '@media (max-width: 768px)';
+const smallMobileMediaQuery = '@media (max-width: 500px)';
 
 export const NavigationContainer = styled.div`
   height: 70px;
@@ -18,6 +19,10 @@ export const NavigationContainer = styled.div`
       font-size: 18px;
       padding: auto;
       font-weight: 400;
+    }
+
+    ${smallMobileMediaQuery} {
+      display: none;
     }
   }
 `;

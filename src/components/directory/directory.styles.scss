@@ -1,6 +1,13 @@
+$mobile-max-width: 550px;
+
 .directory-container {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    @media (max-width: $mobile-max-width) {
+      flex-direction: column;
+    }
+
   } 

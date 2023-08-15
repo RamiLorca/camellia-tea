@@ -7,7 +7,7 @@ import { signOutUser } from '../../utils/firebase/firebase.utils';
 import CartIcon from '../../components/cart-icon/cart-icon.component';
 import CartDropdown from '../../components/cart-dropdown/cart-dropdown.component';
 
-import { NavigationContainer, NavLinks, NavLink, Logo, LogoContainer } from './navigation.styles';
+import { NavigationContainer, NavLinks, NavLink, Logo, LogoContainer, LogoAndHeader } from './navigation.styles';
 
 const Navigation = () => {
     const { currentUser } = useContext(UserContext);
@@ -16,11 +16,12 @@ const Navigation = () => {
     return (
       <Fragment>
         <NavigationContainer className='navigation'>
-          <LogoContainer to='/'>
-            <Logo src={CamelliaLogo} className='logo' alt=''/>
-          </LogoContainer>
 
-          <h1>CAMELLIA TEA CO.</h1>
+            <LogoContainer to='/'>
+              <Logo src={CamelliaLogo} className='logo' alt=''/>
+            </LogoContainer>
+
+            <h1>CAMELLIA TEA CO.</h1>
 
           <NavLinks>
             <NavLink to='/shop'>
